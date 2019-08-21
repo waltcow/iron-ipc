@@ -1,0 +1,32 @@
+{
+  "name": "iron-ipc",
+  "version": "1.0.0",
+  "description": "A type-safe library for strict typing in Electron's IPC modules",
+  "keywords": [
+    "communication",
+    "electron",
+    "ipc",
+    "type",
+    "typesafe",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waltcow/iron-ipc.git"
+  },
+  "license": "ISC",
+  "author": "waltcow@gmail.com",
+  "files": [
+    "dist/"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist/*",
+    "build": "tsc -p tsconfig.build.json",
+    "dist": "yarn clean && yarn build",
+    "publish": "yarn dist && npm publish dist",
+    "lint": "tslint --project ./ --format stylish",
+    "prepublish": "yarn lint && yarn build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
