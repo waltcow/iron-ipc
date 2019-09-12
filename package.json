@@ -1,6 +1,6 @@
 {
   "name": "iron-ipc",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A type-safe library for strict typing in Electron's IPC modules",
   "keywords": [
     "communication",
@@ -29,7 +29,7 @@
     "dist": "yarn clean && yarn build",
     "lint": "tslint --project ./ --format stylish",
     "prepublish": "yarn lint && yarn build",
-    "publish": "yarn dist && npm publish dist",
+    "publish": "yarn dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

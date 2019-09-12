@@ -7,7 +7,6 @@ yarn-error.log
 .rpt2_cache/
 .DS_Store
 *.swp
-dist/
 coverage/
 .docz/
 yarn.lock
