@@ -17,16 +17,19 @@
   "license": "ISC",
   "author": "waltcow@gmail.com",
   "files": [
-    "dist/"
+    "dist/",
+    "README.md"
   ],
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist/*",
     "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist/*",
     "dist": "yarn clean && yarn build",
-    "publish": "yarn dist && npm publish dist",
     "lint": "tslint --project ./ --format stylish",
     "prepublish": "yarn lint && yarn build",
+    "publish": "yarn dist && npm publish dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
