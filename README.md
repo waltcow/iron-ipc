@@ -1,14 +1,18 @@
 ## iron-ipc
 
  Module for type-safe inter process communication (IPC) in electron.
+ 
+### Installation
+ 
+ ```sh
+yarn add iron-ipc
+```
 
-## Usage
+### Usage
 
-
+> create custom ipc module
 
 ```ts
-
-// shared/ipc.ts
 
 import * as electron from 'electron';
 import { IronIpcMain, IronIpcRenderer } from 'iron-ipc';
@@ -32,7 +36,11 @@ const ipcMain: IronIpcMain<IpcChannelMap> = electron.ipcMain;
 
 export { ipcMain, ipcRenderer };
 
-...
+```
+
+> use it in renderer or main process
+
+```tsx
 
 import { ipcMain, Channel } from "shard/ipc"
 
@@ -40,6 +48,5 @@ ipcMain.on(Channel.addTodos, (event, payload) => {
     let title = payload.title
     ...
 });
-
 
 ```
