@@ -1,0 +1,7 @@
+# .npmignore
+
+node_modules
+__tests__
+tsconfig.build.json
+tsconfig.json
+src
